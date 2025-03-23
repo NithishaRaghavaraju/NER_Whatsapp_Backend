@@ -38,22 +38,9 @@ vercel==0.2.1
 # by the following command:
 #
 #    pip-compile --output-file=-
-#
 
-boto3==1.16.51
-    # via -r requirements.in
-    # via
-    # via requests
-jmespath==0.10.0
-    # via
-    #   boto3
-    #   botocore
 python-dateutil==2.8.2
     # via -r requirements.in
-s3transfer==0.3.7
-    # via boto3
-six==1.16.0
-    #   botocore
 
 pip==23.3.1
 
