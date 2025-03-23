@@ -42,7 +42,6 @@ vercel==0.2.1
 
 boto3==1.16.51
     # via -r requirements.in
-botocore==1.19.63
     # via
     # via requests
 jmespath==0.10.0
