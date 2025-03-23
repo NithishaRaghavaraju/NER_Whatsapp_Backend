@@ -6,6 +6,8 @@ import re
 app = Flask(__name__)
 CORS(app)
 
+app.config['MAX_CONTENT_LENGTH'] = 1024
+
 # Load chatbot model
 model_name = "facebook/blenderbot-400M-distill"
 tokenizer = BlenderbotTokenizer.from_pretrained(model_name)
