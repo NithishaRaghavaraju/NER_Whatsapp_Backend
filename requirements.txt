@@ -1,4 +1,4 @@
-python==3.10.6
+
 
 blinker==1.9.0
 gunicorn===19.1.1
