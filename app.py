@@ -12,6 +12,7 @@ app = Flask(__name__)
 CORS(app)
 
 
+
 # Load chatbot model
 model_name = "facebook/blenderbot-400M-distill"
 tokenizer = BlenderbotTokenizer.from_pretrained(model_name)
@@ -147,5 +148,5 @@ def receive_message():
 
 
 if __name__ == "__main__":
-    Port = os.environ.get("PORT",10000)
-    app.run(port=Port)
+    Port = int(os.environ.get("PORT", 10000))
+    app.run(host="0.0.0.0",port=Port)
