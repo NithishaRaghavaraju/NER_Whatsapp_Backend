@@ -1,8 +1,0 @@
-# nixpack.toml
-
-[project]
-requires-python = "<= 3.10"
-
-[start]
-cmd = "gunicorn app:app"
-
