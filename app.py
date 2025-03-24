@@ -1,11 +1,10 @@
 from flask import Flask, request, jsonify
-from flask_cors import CORS
 from transformers import BlenderbotTokenizer, BlenderbotForConditionalGeneration, pipeline, AutoTokenizer, AutoModelForTokenClassification
 import re
 
 
 app = Flask(__name__)
-CORS(app)
+
 
 
 # Load chatbot model
@@ -98,7 +97,7 @@ def extract_entities(text, message_index, existing_entities=set(), threshold=0.8
 
 
 
-@app.route("/home", methods=['GET'])
+@app.route("/")
 def home():
     return "Hello, World!"
 
@@ -140,5 +139,8 @@ def receive_message():
         'person_bot': bot_entities.get("PER", []),
         'location_bot': bot_entities.get("LOC", [])
     })
+
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", debug=True)
 
 
