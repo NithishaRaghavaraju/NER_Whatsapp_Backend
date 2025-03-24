@@ -2,15 +2,10 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS
 from transformers import BlenderbotTokenizer, BlenderbotForConditionalGeneration, pipeline, AutoTokenizer, AutoModelForTokenClassification
 import re
-import os
-from dotenv import load_dotenv
 
-
-load_dotenv()
 
 app = Flask(__name__)
 CORS(app)
-
 
 
 # Load chatbot model
@@ -103,7 +98,7 @@ def extract_entities(text, message_index, existing_entities=set(), threshold=0.8
 
 
 
-@app.route("/api/home", methods=['GET'])
+@app.route("/home", methods=['GET'])
 def home():
     return "Hello, World!"
 
@@ -147,5 +142,3 @@ def receive_message():
     })
 
 
-if __name__ == "__main__":
-    app.run(host="0.0.0.0",port=10000)
