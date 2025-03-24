@@ -1,3 +1,5 @@
+python==3.10.0
+
 blinker==1.9.0
 gunicorn===19.1.1
 certifi==2025.1.31
@@ -38,11 +40,6 @@ vercel==0.2.1
 # by the following command:
 #
 #    pip-compile --output-file=-
-
-python-dateutil==2.8.2
-    # via -r requirements.in
-
 pip==23.3.1
 
 Pillow==9.5.0
-python-dotenv== 0.21.1
