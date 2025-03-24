@@ -97,6 +97,9 @@ def extract_entities(text, message_index, existing_entities=set(), threshold=0.8
 
 
 
+@app.route("/api/home", methods=['GET'])
+def home():
+    return "Hello, World!"
 
 
 @app.route("/api/home", methods=['POST'])
@@ -139,5 +142,5 @@ def receive_message():
 
 
 if __name__ == "__main__":
-    port = int(os.getenv("PORT", 10000))  
-    app.run(debug=True, host="0.0.0.0", port=port)
+    Port = int(os.getenv("PORT", 4000))  
+    app.run(port=Port)
