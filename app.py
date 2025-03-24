@@ -3,9 +3,14 @@ from flask_cors import CORS
 from transformers import BlenderbotTokenizer, BlenderbotForConditionalGeneration, pipeline, AutoTokenizer, AutoModelForTokenClassification
 import re
 import os
+from dotenv import load_dotenv
+
+
+load_dotenv()
 
 app = Flask(__name__)
 CORS(app)
+
 
 # Load chatbot model
 model_name = "facebook/blenderbot-400M-distill"
@@ -142,5 +147,5 @@ def receive_message():
 
 
 if __name__ == "__main__":
-    Port = int(os.getenv("PORT", 4000))  
+    Port = os.environ.get("PORT",10000)
     app.run(port=Port)
