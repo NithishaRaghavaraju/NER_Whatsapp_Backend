@@ -148,5 +148,4 @@ def receive_message():
 
 
 if __name__ == "__main__":
-    Port = int(os.environ.get("PORT", 10000))
-    app.run(host="0.0.0.0",port=Port)
+    app.run(host="0.0.0.0",port=10000)
